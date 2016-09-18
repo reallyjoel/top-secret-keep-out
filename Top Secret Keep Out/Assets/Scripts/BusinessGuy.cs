@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BusinessGuy : MonoBehaviour
 {
-    public float RunSpeed;
+    public Vector2 Direction;
 
     Rigidbody2D body;
 
@@ -15,26 +15,17 @@ public class BusinessGuy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        body.AddRelativeForce(Vector2.left * RunSpeed - body.velocity);
+        //body.velocity = Direction;
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            body.AddRelativeForce(new Vector2(-500f, 0f));
+
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            body.AddRelativeForce(new Vector2(0f, 1000f));
+
         }
     }
 
-    //IEnumerator Jump()
-    //{
-
-    //    while (false)
-    //    {
-
-    //    }
-    //    yield return null;
-    //}
 }
