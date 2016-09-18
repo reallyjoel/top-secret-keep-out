@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class MainMenu : MonoBehaviour
@@ -15,7 +16,7 @@ public class MainMenu : MonoBehaviour
     {
 	    if(Input.GetMouseButtonDown(0))
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("test");
+            SceneManager.LoadScene("test");
         }
 	}
 }
